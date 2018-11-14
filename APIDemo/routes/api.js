@@ -21,7 +21,7 @@ router.post('/login', async (ctx,next)=>{
         let userToken = {
             userId: data.id
         }
-        let token = jwt.sign(userToken, secret, {expiresIn: '1m'});
+        let token = jwt.sign(userToken, secret, {expiresIn: '1h'});
         ctx.body = {
             result: 'ok',
             code: 200,
